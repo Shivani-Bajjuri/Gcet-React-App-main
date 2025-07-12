@@ -1,0 +1,105 @@
+.register-container {
+  max-width: 400px;
+  margin: 48px auto 80px auto;
+  background: #fff;
+  padding: 36px 28px 28px 28px;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-container h3 {
+  color: #1976d2;
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-container p {
+  width: 100%;
+  margin: 18px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-container input[type="text"],
+.register-container input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #bcdffb;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 6px;
+  background: #f7faff;
+  transition: border 0.18s;
+  box-sizing: border-box;
+}
+
+.register-container input[type="text"]:focus,
+.register-container input[type="password"]:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+  background: #e3f0ff;
+}
+
+.register-container button {
+  width: 100%;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-top: 24px;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+}
+
+.register-container button:hover {
+  background: #125ea2;
+}
+
+.register-container hr {
+  margin: 28px 0 18px 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+}
+
+.register-container .login-link {
+  text-align: center;
+  margin: 16px 0 0 0;
+  width: 100%;
+  font-size: 1.05rem;
+}
+
+.register-container li {
+  color: #1976d2;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  list-style: none;
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  .register-container {
+    padding: 18px 6px;
+  }
+  .register-container h3 {
+    font-size: 1.3rem;
+  }
+}

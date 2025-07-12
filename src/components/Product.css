@@ -1,0 +1,167 @@
+body {
+    background: #f6f9fe;
+}
+
+.App-Product-Row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 30px 10px 10px 10px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+.App-Product-Row > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 18px 18px 18px;
+    margin: 5px;
+    border: 1.5px solid #e3eaf3;
+    border-radius: 16px;
+    width: 100%;         /* Make card fill grid cell */
+    max-width: 260px;    /* Limit max width for nice look */
+    min-height: 420px;
+    box-shadow: 0 4px 24px rgba(25, 118, 210, 0.08);
+    background-color: #fff;
+    transition: box-shadow 0.3s, transform 0.2s;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.App-Product-Row img {
+    height: 160px;
+    width: 160px;
+    object-fit: contain;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    background: #f7faff;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.04);
+    display: block;
+}
+
+.App-Product-Row > div:hover {
+    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.16);
+    transform: translateY(-6px) scale(1.03);
+    border-color: #1976d2;
+}
+
+.App-Product-Row h3 {
+    font-size: 1.18rem;
+    margin: 10px 0 6px 0;
+    color: #1976d2;
+    text-align: center;
+    min-height: 48px;
+    font-weight: 600;
+    width: 100%;
+    letter-spacing: 0.5px;
+}
+
+.App-Product-Row h4 {
+    font-size: 1.08rem;
+    margin: 6px 0 14px 0;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+.App-Product-Row p {
+    font-size: 0.98rem;
+    margin: 8px 0 12px 0;
+    color: #666;
+    text-align: center;
+    min-height: 60px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.App-Product-Row button {
+    padding: 12px 0;
+    background-color: #1976d2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    align-self: stretch;
+    font-size: 1.08rem;
+    margin-top: 18px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+    letter-spacing: 0.5px;
+}
+
+.App-Product-Row button:hover {
+    background-color: #125ea2;
+    transform: scale(1.04);
+}
+
+.popup {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #1976d2;
+    padding: 18px 38px 18px 54px;
+    border-radius: 16px;
+    font-size: 1.18rem;
+    font-weight: 600;
+    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18);
+    z-index: 9999;
+    border: 2px solid #1976d2;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 260px;
+    max-width: 90vw;
+    animation: fadeInOut 2s;
+}
+
+.popup::before {
+    content: '✔';
+    color: #fff;
+    background: #1976d2;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    margin-right: 10px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(-20px);}
+    10% { opacity: 1; transform: translateX(-50%) translateY(0);}
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-20px);}
+}
+
+@media (max-width: 1200px) {
+    .App-Product-Row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 900px) {
+    .App-Product-Row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .App-Product-Row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.welcome-msg {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1976d2;
+    margin: 32px 0 18px 24px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
